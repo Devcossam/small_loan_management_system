@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
+{% extends "master.html" %}
+    {% block title %}
+        Loans DashDashboard 
+    {% endblock %}
+
+    {% block extra_head %}
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="Developer name" content="Cossam Soko">
         <meta name="keywords" content="Small loans management system">
         <meta http-equiv="refresh" content="100">
-        <title>Loans DashDashboard </title>
-    </head>
-    <body>
-        <p>loans Dashboard html page.</p>
-    </body>
-</html>
+    {% endblock extra_head %}
+
+    {% block content %}
+        <p>List of loans for this month</p>
+        <ul>
+            {% for loan in loans %}
+                <li>Customer Name: <a href="loan_details/{{ loan.id }}">{{ loan.customer_name }}</a></li>
+            {% endfor %}
+        </ul>
+        <p></p>
+        <p>back To <a href="{% url 'main' %}">Home</a></p>
+    {% endblock %}
