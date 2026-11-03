@@ -1,0 +1,21 @@
+
+{% extends "master.html" %}
+    {% block title %}
+        Loan Details 
+    {% endblock %}
+
+    {% block extra_head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Developer name" content="Cossam Soko">
+        <meta name="keywords" content="Small loans management system">
+        <meta http-equiv="refresh" content="100">
+    {% endblock extra_head %}
+
+    {% block content %}
+        <h2>Customer Name: {{ loan.customer_name }}</h2>
+        <p>Loan Amount: {{ loan.loan_amount }}</p>
+        <p>Date Created: {{ loan.created_on_date }}</p>
+        <p></p>
+        <p>back To <a href="{% url 'displayLoans'%}">Loans Dashboard</a></p>
+    {% endblock %}

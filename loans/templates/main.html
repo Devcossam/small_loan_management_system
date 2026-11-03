@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+    {% block title %}
+        Small Loans Management system 
+    {% endblock %}
+
+    {% block extra_head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Developer name" content="Cossam Soko">
+        <meta name="keywords" content="Small loans management system">
+        <meta http-equiv="refresh" content="100">
+    {% endblock extra_head %}
+
+    {% block content %}
+        <h1>Small Loans Management System </h1>
+        <h2>My Loans</h2>
+        <p>Check my loans at <a href="{% url 'displayLoans' %}">Loans</a></p>
+    {% endblock %}
