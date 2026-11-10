@@ -31,9 +31,5 @@ def loan_details(request,id):
     return HttpResponse(template.render(context,request))
 
 
-def main(request):
-    """display the home langing page"""
 
-    template = loader.get_template('main.html')
 
-    return HttpResponse(template.render())
